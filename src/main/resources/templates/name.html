@@ -1,0 +1,15 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>首页</title>
+</head>
+<body>
+
+<span th:text="'从前有座山，山里有座庙，庙里有个和尚，叫'+ ${name} + ',是个狠人，有点厉害！'"></span>
+<hr/>
+<span th:text=|从前有座山，山里有座庙，庙里有个和尚，叫${name}，是个狠人，有点厉害！|></span>
+<hr/>
+<input type="text" name="name" th:value="${name}">
+
+</body>
+</html>

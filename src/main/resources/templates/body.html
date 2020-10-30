@@ -1,0 +1,17 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>首页</title>
+</head>
+<body>
+
+<!--将片段引入到该处，使用片段的内容插入到引用的标签中，保留原div，仅引入内容-->
+<div th:include="~{head :: test}"></div>
+
+<!--将片段引入到该处，使用片段标签替换掉原来的标签，直接去掉了原来的标签-->
+<div th:replace="~{head :: test}"></div>
+
+<!--将片段引入到该处，使用片段标签插入到引用标签中去-->
+<div th:insert="~{head :: test}"></div>
+</body>
+</html>

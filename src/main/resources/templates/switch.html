@@ -1,0 +1,16 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>首页</title>
+</head>
+<body>
+
+<div th:switch="${auth}">
+    <span th:case="auth">普通用户</span><br/>
+    <span th:case="user">用户</span><br/>
+    <span th:case="root">超级管理员</span><br/>
+    <span th:case="${manager}">管理员</span><br/>
+</div>
+
+</body>
+</html>

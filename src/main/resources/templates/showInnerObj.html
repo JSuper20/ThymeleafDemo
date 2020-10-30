@@ -1,0 +1,23 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>首页</title>
+</head>
+<body>
+
+当前日期：<span th:text="${#dates.format(date, 'yyyy-MM-dd HH:mm:ss')}"></span>
+<br/>
+<br/>
+数值：<span th:text="${num}"></span>
+<br/>
+数值（精确到小数点后两位）:<span th:text="${#numbers.formatDecimal(num, 1, 2)}"></span>
+<br/>
+<br/>
+字符串的展示：<span th:text="${str}"></span><br/><br/>
+字符串指定长度展示（20个字符）:<span th:text="${#strings.abbreviate(str,20)}"></span><br/><br/>
+字符串的截取：<span th:text="${#strings.substring(str, 0, 20)}"></span></span><br/><br/>
+字符串的判空：<span th:text="${#strings.isEmpty(str)}"></span>
+
+
+</body>
+</html>
